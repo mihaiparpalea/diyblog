@@ -1,0 +1,16 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<h1>Blogger: {{user.first_name}} {{user.last_name}}</h1> 
+
+<div style="margin-left:20px;margin-top:20px">
+	{% if user.biography %}
+	<h4>Biography</h4>
+	<div>{{ user.biography }}</div>
+	{% endif %}
+	<h4>Blogs</h4>
+	{% for blog in user.blog_set.all %}
+		<p><a href="{{ blog.get_absolute_url }}">{{ blog.name }}</a></p>
+	{% endfor %}
+</div>
+{% endblock %}
