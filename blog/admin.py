@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Blog, Comment, Biography
+from .models import Blog, Comment, Author, Biography
 
 class BlogAdmin(admin.ModelAdmin):
 	list_display = ('name', 'author')
@@ -12,3 +12,7 @@ admin.site.register(Comment, CommentAdmin)
 class BiographyAdmin(admin.ModelAdmin):
 	list_display = ('blogger', 'content')
 admin.site.register(Biography, BiographyAdmin)
+
+class AuthorAdmin(admin.ModelAdmin):
+	list_display = ('last_name', 'first_name', 'biography')
+admin.site.register(Author, AuthorAdmin)
