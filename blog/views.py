@@ -38,9 +38,6 @@ class BlogDetailView(generic.DetailView):
 		context["text"] = text
 		return context
 	
-	
-	
-
 class BloggerDetailView(generic.DetailView):
 	model = Author
 

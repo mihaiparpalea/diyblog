@@ -12,7 +12,3 @@ admin.site.register(Comment, CommentAdmin)
 class BiographyAdmin(admin.ModelAdmin):
 	list_display = ('blogger', 'content')
 admin.site.register(Biography, BiographyAdmin)
-
-class AuthorAdmin(admin.ModelAdmin):
-	list_display = ('last_name', 'first_name', 'biography')
-admin.site.register(Author, AuthorAdmin)
