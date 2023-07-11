@@ -48,3 +48,6 @@ _ReSharper*/
 
 # Database
 *.sqlite3
+
+# Environment folder
+env/
